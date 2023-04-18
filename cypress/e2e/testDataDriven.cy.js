@@ -17,7 +17,7 @@ describe('The example use Data Driven Testing using Excel file.', () => {
             cy.log(data)
         })
 
-        cy.fixture('xlsxData').then((data) => {
+        cy.fixture('addresses').then((data) => {
             cy.log(data)
         })
     });
