@@ -3,6 +3,10 @@ const fs = require('fs')
 const xlsx = require('xlsx');
 
 module.exports = defineConfig({
+  env: {
+    staging: '/login',
+    products_url: '/products',
+  },
   e2e: {
     setupNodeEvents(on, config) {
       // readFile
@@ -22,4 +26,5 @@ module.exports = defineConfig({
       })
     }
   },
+  // defaultCommandTimeout: 8000,
 });
