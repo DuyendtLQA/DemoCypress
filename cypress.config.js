@@ -3,6 +3,11 @@ const fs = require('fs')
 const xlsx = require('xlsx');
 
 module.exports = defineConfig({
+  projectId: "99m3w8",
+  chromeWebSecurity: false,
+  numTestsKeptInMemory: 1,
+  screenshotOnRunFailure: true,
+  trashAssetsBeforeRuns: false,
   e2e: {
     setupNodeEvents(on, config) {
       // readFile

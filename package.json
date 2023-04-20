@@ -4,12 +4,17 @@
   "description": "demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:firefox": "cypress run --browser edge",
+    "allTests-e2e": "cypress run cypress/e2e/",
+    "cypress-multi-browser": "npm run allTests-e2e -- --browser edge && npm run browser chrome"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.9.0",
+    "cypress-iframe": "^1.0.1",
     "fs": "^0.0.1-security",
     "node-xlsx": "^0.21.0",
     "path": "^0.12.7",
