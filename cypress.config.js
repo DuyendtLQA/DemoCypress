@@ -8,6 +8,10 @@ module.exports = defineConfig({
   numTestsKeptInMemory: 1,
   screenshotOnRunFailure: true,
   trashAssetsBeforeRuns: false,
+  env: {
+    staging: '/login',
+    products_url: '/products',
+  },
   e2e: {
     setupNodeEvents(on, config) {
       // readFile
@@ -27,4 +31,5 @@ module.exports = defineConfig({
       })
     }
   },
+  // defaultCommandTimeout: 8000,
 });

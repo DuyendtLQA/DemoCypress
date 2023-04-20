@@ -2,10 +2,11 @@
 
 describe('example to-do app', () => {
   beforeEach(() => {
-    cy.visit('')
+    cy.visit('https://demo.nopcommerce.com/login?returnUrl=%2F')
   })
 
   it('Login success', () => {
     
   })
 })
+
