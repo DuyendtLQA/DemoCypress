@@ -1,4 +1,6 @@
 import "cypress-iframe"
+import 'cypress-mochawesome-reporter/register';
+
 describe('handle iframe', () => {
     it("demo iframe", () => {
       cy.visit("https://jqueryui.com/draggable/")
