@@ -44,6 +44,7 @@ module.exports = defineConfig({
   //     showFailed: false
   //  },
   env: {
+    baseUrl: 'https://www.programsbuzz.com',
     staging: '/login',
     products_url: '/products',
   },
