@@ -48,7 +48,7 @@ module.exports = defineConfig({
     products_url: '/products',
   },
   e2e: {
-    specPattern: "**/*.feature",
+    // specPattern: "**/*.feature",
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
       on('file:preprocessor', cucumber())
