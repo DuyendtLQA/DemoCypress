@@ -11,6 +11,7 @@ describe('handle iframe', () => {
           //assertion to verify text
           expect(frmtxt).to.contains('Drag me around');
           cy.log(frmtxt);
+          cy.log(frmtxt);
       })
     })
   })
