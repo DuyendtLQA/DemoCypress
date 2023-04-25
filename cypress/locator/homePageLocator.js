@@ -1,3 +1,3 @@
 export default class HomePageLocator {
-    static topicTags = 'a[data-component="keyword"]'
+    static lbWelcome = 'Welcome to our store'
   }

@@ -13,7 +13,7 @@ class LoginPage extends BasePage {
     }
 
     clickBtnLogin() {
-        this.clickElement(LoginPageLocator.password);
+        this.clickElementByString(LoginPageLocator.btnLogin ,LoginPageLocator.lbLogin);
         return new HomePage()
     }
 }

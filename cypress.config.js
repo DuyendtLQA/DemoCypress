@@ -49,6 +49,7 @@ module.exports = defineConfig({
   },
   e2e: {
     // specPattern: "**/*.feature",
+    baseUrl: 'https://demo.nopcommerce.com/login?returnUrl=%2F',
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
       on('file:preprocessor', cucumber())

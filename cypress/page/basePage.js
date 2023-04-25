@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-require('cypress-xpath')
+// require('cypress-xpath')
 
 // Cypress.on("uncaught:exception", (err, runnable) => {
 //     return false;
@@ -16,8 +16,8 @@ class BasePage {
         cy.xpath(locator, { timeout: 20000 }).click({ multiple: true, force: true });
     }
 
-    clickElementByString(string) {
-        cy.contains(string, { timeout: 20000 }).click()
+    clickElementByString(locator, string) {
+        cy.get(locator).contains(string, { timeout: 20000 }).click()
     }
 
     clickFirstElement(locator) {

@@ -1,4 +1,6 @@
 export default class LoginPageLocator {
-    static email = 'a[data-component="keyword"]'
-    static password = 'a[data-component="keyword"]'
+    static email = '#Email'
+    static password = '#Password'
+    static btnLogin = 'button'
+    static lbLogin = 'Log in'
   }
