@@ -2,7 +2,7 @@ import { Given, And, Then } from "cypress-cucumber-preprocessor/steps";
 Given("I visit the zero.webappsecurity.com site", () => {
   cy.visit("http://zero.webappsecurity.com/login.html");
 });
-Given("I sign in with {int} and {int}", (userName, password) => {
+Given("I sign in with {string} and {string}", (userName, password) => {
   cy.get("#user_login").type(userName);
   cy.get("#user_password").type(password);
   cy.contains("Sign in").click();

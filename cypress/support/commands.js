@@ -20,3 +20,6 @@
 // -- This is a dual command --
 // Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
 //
+Cypress.Commands.add("sendkeyLocator", (locator, key) => {
+    cy.get(locator).clear({ force: true }).type(key, { force: true, timeout: 10000 });
+})

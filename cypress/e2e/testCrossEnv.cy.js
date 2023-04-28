@@ -9,7 +9,7 @@ describe.only('Conf Env Test',()=>{
         cy.get('abc').click()
     })
 
-    it("truyen bien giua tcs", () => {
+    it("pass variables between tcs", () => {
         cy.visit(url)
     })
 })
