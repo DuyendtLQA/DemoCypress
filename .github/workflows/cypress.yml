@@ -2,7 +2,10 @@ name: Cypress Tests
 
 on:
   schedule:
-    - cron: '20 07 * * 5'
+    # runs tests every day at 4am
+    - cron: '28 7 * * *'
+  workflow_dispatch:
+
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
