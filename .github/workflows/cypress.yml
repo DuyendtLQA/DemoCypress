@@ -2,7 +2,7 @@ name: Cypress Tests
 
 on:
   schedule:
-    - cron: 00 14 * * 1-5
+    - cron: 03 14 * * 0-6
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
