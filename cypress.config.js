@@ -67,7 +67,7 @@ module.exports = defineConfig({
             }
           })
         },
-        return {
+        return: {
         browsers: config.browsers.filter(
           (b) => b.family === 'chromium' && b.name !== 'chrome'
         ),
