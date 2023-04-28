@@ -48,6 +48,7 @@ module.exports = defineConfig({
     products_url: '/products',
   },
   e2e: {
+    defaultBrowser: 'chrome',
     // specPattern: "**/*.feature",
     baseUrl: 'https://demo.nopcommerce.com/login?returnUrl=%2F',
     setupNodeEvents(on, config) {
