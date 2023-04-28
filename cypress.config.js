@@ -70,6 +70,9 @@ module.exports = defineConfig({
         }
       })
     }
+    return {
+    browsers: config.browsers.filter((b) => b.name === 'chrome'),
+  }
   },
   // defaultCommandTimeout: 8000,
 });
