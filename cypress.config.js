@@ -33,6 +33,17 @@ module.exports = defineConfig({
     inlineAssets: true,
     saveAllAttempts: false
   },
+  browsers: [
+    {
+    name: 'chrome',
+    family: 'chromium',
+    channel: 'stable',
+    displayName: 'Chrome',
+    version: '112.0.5615.49',
+    path: 'C:\Program Files\Google\Chrome\Application\chrome.exe',
+    minSupportedVersion: 64,
+    majorVersion: '112',
+    }],
   //  reporterOptions: {
   //     reportDir: "cypress/results",
   //     reportFilename:"report",
