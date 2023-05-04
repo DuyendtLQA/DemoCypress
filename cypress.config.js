@@ -3,21 +3,6 @@ const fs = require('fs')
 const xlsx = require('xlsx');
 const path = require('path')
 const cucumber = require('cypress-cucumber-preprocessor').default;
-// const fetchConfigurationByFile = file => {
-//   const pathOfConfigurationFile = `config/cypress.${file}.json`;
-
-//   return (
-//     file && fs.readJson(path.join(__dirname, "../", pathOfConfigurationFile))
-//   );
-// };
-
-// module.exports = (on, config) => {
-//   const environment = config.env.configFile || "development";
-//   const configurationForEnvironment = fetchConfigurationByFile(environment);
-
-//   return configurationForEnvironment || config;
-// };
-
 module.exports = defineConfig({
   projectId: "99m3w8",
   chromeWebSecurity: false,
@@ -33,6 +18,17 @@ module.exports = defineConfig({
     inlineAssets: true,
     saveAllAttempts: false
   },
+  // browsers: [
+  //   {
+  //   name: 'chrome',
+  //   family: 'chromium',
+  //   channel: 'stable',
+  //   displayName: 'Chrome',
+  //   version: '112.0.5615.49',
+  //   path: 'C:\Program Files\Google\Chrome\Application\chrome.exe',
+  //   minSupportedVersion: 64,
+  //   majorVersion: '112',
+  //   }],
   //  reporterOptions: {
   //     reportDir: "cypress/results",
   //     reportFilename:"report",
@@ -44,6 +40,7 @@ module.exports = defineConfig({
   //     showFailed: false
   //  },
   env: {
+    baseUrl: 'https://www.programsbuzz.com',
     staging: '/login',
     products_url: '/products',
   },
@@ -68,10 +65,10 @@ module.exports = defineConfig({
           })
         },
         return: {
-        browsers: config.browsers.filter(
-          (b) => b.family === 'chromium' && b.name !== 'chrome'
-        ),
-      }
+          browsers: config.browsers.filter(
+            (b) => b.family === 'chromium' && b.name !== 'chrome'
+          ),
+        }
       })
     }
   },
