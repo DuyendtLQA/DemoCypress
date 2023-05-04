@@ -20,6 +20,22 @@
 // -- This is a dual command --
 // Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
 //
+import "cypress-iframe"
 Cypress.Commands.add("sendkeyLocator", (locator, key) => {
     cy.get(locator).clear({ force: true }).type(key, { force: true, timeout: 10000 });
 })
+
+beforeEach(function() {
+    let testSuite = Cypress.env('GROUP');
+    if (!testSuite) {
+      return;
+    }
+    cy.log(testSuite)
+    const testName = Cypress.mocha.getRunner().test.fullTitle();
+    cy.log(testName)
+    testSuite = "<"+testSuite+">"
+    cy.log(testSuite)
+    if (!testName.includes(testSuite)) {
+      this.skip();
+    }
+  })
