@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        containers: ['a', b] 
+        containers: ['a', b,1,2,3] 
     steps:
       - name: Checkout 
         uses: actions/checkout@v3
