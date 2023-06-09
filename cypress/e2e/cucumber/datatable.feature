@@ -11,7 +11,6 @@ Feature: TestFeature
             | admin2   |  | password2|
         # Then I click Sign in button
 
-@focus 
     Scenario Outline: Test the login feature
         Given I visit the zero.webappsecurity.com site
         # Given I sign in with 10 and 10\

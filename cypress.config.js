@@ -7,7 +7,7 @@ module.exports = defineConfig({
   projectId: "99m3w8",
   chromeWebSecurity: false,
   numTestsKeptInMemory: 1,
-  screenshotOnRunFailure: false,
+  screenshotOnRunFailure: true,
   trashAssetsBeforeRuns: true,
   reporter: "cypress-mochawesome-reporter",
   reporterOptions: {
@@ -16,7 +16,10 @@ module.exports = defineConfig({
     overwrite: true,
     embeddedScreenshots: true,
     inlineAssets: true,
-    saveAllAttempts: false
+    saveAllAttempts: false,
+    reportFilename: "[status]-[datetime]-[name]-report",
+    timestamp: "longDate"
+
   },
   // browsers: [
   //   {
@@ -45,6 +48,7 @@ module.exports = defineConfig({
     products_url: '/products',
   },
   e2e: {
+    
     // specPattern: "**/*.feature",
     baseUrl: 'https://demo.nopcommerce.com/login?returnUrl=%2F',
     setupNodeEvents(on, config) {
@@ -63,13 +67,13 @@ module.exports = defineConfig({
               reject(e);
             }
           })
-        },
-        return: {
-          browsers: config.browsers.filter(
-            (b) => b.family === 'chromium' && b.name !== 'chrome'
-          ),
-        }
+        } 
       })
+      // return {
+      //   browsers: config.browsers.filter(
+      //     (b) => b.family === 'chromium' && b.name !== 'chrome'
+      //   ),
+      // }
     }
   },
   // defaultCommandTimeout: 8000,

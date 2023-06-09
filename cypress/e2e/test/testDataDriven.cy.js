@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+import dataF from '../../fixtures/dataLogin.json'
 describe('The example use Data Driven Testing using Excel file.', () => {
     let data
     before(() => {
@@ -9,16 +10,17 @@ describe('The example use Data Driven Testing using Excel file.', () => {
             data = rows
         })
     })
+    dataF.forEach(item => {
+        it(`example data from Excel file . ${item.email}`, () => {
+            cy.log(item)
 
-    it("example data from Excel file.", () => {
-        cy.log(data)
+            // cy.fixture('dataLogin').then((data) => {
+            //     cy.log(data)
+            // })
 
-        cy.fixture('dataLogin').then((data) => {
-            cy.log(data)
-        })
-
-        cy.fixture('addresses').then((data) => {
-            cy.log(data)
-        })
-    });
-});
+            // cy.fixture('addresses').then((data) => {
+            //     cy.log(data)
+            // })
+        });
+    })
+})
