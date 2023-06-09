@@ -17,5 +17,5 @@ steps:
 
 - script: |
     npm install
-    npm cypress run
+    npx cypress run
   displayName: 'npm install and npx cypress run'
